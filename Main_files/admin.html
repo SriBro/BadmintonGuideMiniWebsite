@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" type="image/x-icon" href="images/shuttle.png">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Admin Page</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">
+        <img src="images/shuttle.png" width="30" height="30" alt="" style="border-radius:50%;">
+      </a>
+      <a class="navbar-brand" href="#">Badminton Guide</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item mr-4" style="font-size: larger;">
+            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item mr-4">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+        </ul>
+    </nav>
+    <div
+      class="container d-flex justify-content-center align-items-center"
+      style="height: 75vh"
+    >
+      <div
+        class="card d-flex justify-content-center align-items-center"
+        style="border: 2px solid darkblue; width: 280px"
+      >
+        <form
+          action="php/login.php"
+          method="post"
+          onsubmit="return validateForm()"
+        >
+          <div class="form-group my-2">
+            <label for="exampleInputEmail1">Username</label>
+            <input
+              name="uname"
+              type="text"
+              class="form-control"
+              autocomplete="off"
+              id="username"
+              aria-describedby="emailHelp"
+              placeholder="Username"
+            />
+            <span id="usernameError" class="text-danger"></span>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input
+              name="pass"
+              type="password"
+              class="form-control"
+              id="password"
+              placeholder="Password"
+            />
+            <span id="passwordError" class="text-danger"></span>
+          </div>
+          <button type="submit" class="btn btn-outline-primary mb-3">
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- ... (your script tags) ... -->
+    <script>
+      function validateForm() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        var usernameError = document.getElementById("usernameError");
+        var passwordError = document.getElementById("passwordError");
+
+        usernameError.textContent = "";
+        passwordError.textContent = "";
+
+        if (username.trim() === "") {
+          usernameError.textContent = "username is required";
+          return false;
+        }
+        if (password.trim() === "") {
+          passwordError.textContent = "password is required";
+          return false;
+        }
+        return true;
+      }
+    </script>
+  </body>
+</html>

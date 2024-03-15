@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="icon" type="image/x-icon" href="images/shuttle.png">
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style/style.css" />
+    <title>User Input Details</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">
+        <img src="images/shuttle.png" width="30" height="30" alt="" style="border-radius:50%;">
+      </a>
+        <a class="navbar-brand" href="#">Badminton Guide</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item mr-4" style="font-size: larger;">
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item mr-4">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+          </ul>
+      </nav>
+      <div class="container d-flex justify-content-center align-items-center" style="height:75vh;">
+        <div
+        class="card d-flex justify-content-center align-items-center"
+        style="border: 2px solid darkblue; width:280px;"
+      >
+      <div class="card-body">
+        <form action="php/view.php" method="post" onsubmit="return validateForm()">
+            <label for="" class="form-label mx-1 justify-content-start my-3" id="budget">Budget</label>
+          <select name="budget">
+            <option>1000</option>
+            <option>2000</option>
+            <option>3000</option>
+            <option>4000</option>
+            <option>5000</option>
+            <option>6000</option>
+            <option>7000</option>
+          </select>
+          <br>
+            <label for="" class="form-label mx-1 justify-content-start my-3" id="weight">Weight</label>
+          <select name="racket">
+            <option class="bg-primary">Heavyweight</option>
+            <option>Lightweight</option>
+          </select>
+        <br>
+          <label for="sample" class="form-label mx-1 justify-content-start my-3" id="style">Style Of Play</label>
+          <select name="play">
+            <option>Attacking</option>
+            <option>Defensive</option></select
+          >
+          <button type="submit" class="btn btn-outline-primary mb-3 my-3">View</button>
+        </form>
+      </div>
+    </div>
+</div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
